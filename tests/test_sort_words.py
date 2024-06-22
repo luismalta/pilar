@@ -11,7 +11,7 @@ def test_sort_words_acending_correctly():
 
     expected_result = ["batman", "coringa", "Robin"]
 
-    result = sort_words(words, 'asc')
+    result = sort_words(words, "asc")
 
     assert result == expected_result
 
@@ -24,6 +24,6 @@ def test_sort_words_descending_correctly():
 
     expected_result = ["Robin", "coringa", "batman"]
 
-    result = sort_words(words, 'desc')
+    result = sort_words(words, "desc")
 
     assert result == expected_result

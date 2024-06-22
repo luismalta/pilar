@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from pilar.routers import vowel_count, sort
 
+from pilar.routers import sort, vowel_count
 
 app = FastAPI(title="PilarAPI")
 

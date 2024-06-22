@@ -18,7 +18,7 @@ def count_vowels(word: str) -> int:
     return vowels_count
 
 
-def sort_words(words: List[str], order: Literal['asc', 'desc']) -> List[str]:
+def sort_words(words: List[str], order: Literal["asc", "desc"]) -> List[str]:
     """
     Sorts a list of words in ascending or descending order ignoring case.
 
@@ -29,4 +29,4 @@ def sort_words(words: List[str], order: Literal['asc', 'desc']) -> List[str]:
         List[str]: The sorted list of words.
     """
 
-    return sorted(words, key=str.casefold, reverse=order == 'desc')
+    return sorted(words, key=str.casefold, reverse=order == "desc")

@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+
 from pilar.models.VowelCountModel import VowelCountModel
 from pilar.utils import count_vowels
 

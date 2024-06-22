@@ -12,6 +12,25 @@ fastapi = "^0.111.0"
 pydantic = "^2.7.4"
 pytest = "^8.2.2"
 
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.1"
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
 
 [build-system]
 requires = ["poetry-core"]

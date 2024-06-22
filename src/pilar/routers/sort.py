@@ -1,5 +1,7 @@
 from typing import List
+
 from fastapi import APIRouter
+
 from pilar.models.SortModel import SortModel
 from pilar.utils import sort_words
 

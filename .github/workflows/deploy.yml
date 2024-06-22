@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    branches: master
+    
+jobs:
+  checks:
+    uses: ./.github/workflows/checks.yml
+  deploy:
+    needs: checks
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      #----------------------------------------------
+      #       deploy to Render
+      #----------------------------------------------
+      - name: Deploy to Render
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.RENDER_API_KEY }}
+          wait-for-success: true
+  
